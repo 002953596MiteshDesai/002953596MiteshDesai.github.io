@@ -1,0 +1,305 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+/*
+*
+*html,body
+*/
+html,body{
+    height:100%;
+    margin:0;
+    
+    font-family: sans-serif;
+    
+    background-color: whitesmoke;
+}
+/*
+*
+* header
+*
+*/
+header {
+    display : grid;
+    grid-template-areas:
+    "image h1"
+     ;
+    grid-template-columns:15% auto;
+
+    background-color: peachpuff;
+    
+    padding:0;
+    margin:0;
+}
+.logo__header {
+    grid-area: image;
+    
+    padding-left:1rem;
+    padding-top:1rem;
+    
+    max-width: 7rem;
+    aspect-ratio: 1/1;
+    size: 25px;
+}
+.heading__header {
+    grid-area: h1;
+    display: flex;
+    justify-content:flex-start;
+    padding-left:7rem;
+    font-size: xx-large;
+}
+.menu {
+    display: flex;
+    flex-direction:row;
+    list-style: none;
+    justify-content:space-evenly;
+
+    align-items: center;
+
+    font-size: large;
+    padding: 0;
+    margin: 0;
+    
+    width:100vw;
+}
+
+.menu button {
+    font-size: inherit;
+    border: none;
+    background-color: inherit;
+    text-decoration: underline;
+    font-size: large;
+    cursor: pointer;
+    padding :0;
+    margin:0;
+    color: blue;
+}
+
+.menu ul{
+    position: absolute;
+    
+    overflow: hidden;
+
+    padding :0;
+    margin:0;
+
+    list-style: none;
+    
+    background-color: white;
+
+    font-size: large;
+
+    transform:rotateX(90deg);
+    transform-origin: top;
+
+    transition: transform 1s; 
+    
+    }
+
+.menu li:hover ul,
+.menu li:focus-within ul {
+    transform: rotateX(0);
+}
+
+.menu__items li {
+    padding: 1rem;
+    width :8rem;
+}
+/*
+*
+*main
+*
+*/
+
+.index__main {
+    background-color: whitesmoke;
+    height: auto;
+    padding: 2rem;
+}
+.cards {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+    padding:1 rem;
+}
+.card {
+    grid-column: span 12;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+       
+    padding: 1rem;
+    border-radius: 2rem;
+    
+    background-color: skyblue;
+    box-shadow: 3px 3px 3px 3px lightsalmon;
+}
+.card:hover {
+    box-shadow: none;
+}
+.card__text {
+    padding: 1rem;
+}
+.card__pic {
+    aspect-ratio: 1/1;
+    width: 80%;
+}
+.card__link{
+    padding: 1rem;
+    border-radius: 1rem;
+    
+    background-color: yellowgreen;
+    color: white;
+    text-decoration: none;
+}
+
+.about__main {
+    background-color: whitesmoke;
+    height: auto;
+}
+
+p {
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    font-size: medium;
+}
+.register__form {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas:
+    "label input "
+    "label select "
+     ;
+    gap: 2rem;
+    padding-left:2rem;
+    background-color: whitesmoke;
+}
+
+div {
+    padding-left: 2rem;
+}
+/*form {
+    align-items: center;  
+
+    
+    
+}*/
+
+label {
+   
+    grid-area: lable;
+    grid-column: span 12;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    padding-left: 2 rem;
+    width: 100vh;
+    
+       
+    padding: 2rem;
+    
+   
+    
+    background-color: skyblue;
+    width: auto;
+    
+}
+input {
+    grid-area: input;
+    grid-column: span 12;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-right: 1rem;
+    justify-content: flex-start;
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+
+select {
+    grid-area: select;
+    grid-column: span 12;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-left: 2rem;
+    justify-content: flex-start;
+    padding: 0.2rem;
+    width: 8rem;
+    
+}
+
+label button {
+    grid-area: select;
+    grid-column: span 12;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-left: 2rem;
+    justify-content: flex-start;
+    padding: 0;
+    width: 8rem;
+    
+
+
+}
+
+/*
+*
+*footer
+*
+*/
+footer{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: peachpuff;
+    font-size: large;
+}
+/*
+*
+*Media query for adaptive design
+*
+*/
+@media screen and (min-width:50rem) {
+    body { background-color: whitesmoke;
+    }
+    .card{
+        grid-column: span 3;
+        
+    }
+    .menubar__header{
+        flex-direction:row;    
+    }
+    footer {
+        grid-column: span 4;
+    }
+    .menu2{
+        flex-direction: row;
+    }
+
+        
+    label  {
+        grid-column: span 3;
+        display: flex;
+        flex-direction:row;
+        align-items:right;
+    
+    }
+    input {
+        grid-column: span 3;
+        display: flex;
+        flex-direction:row;
+        align-items:right;
+    }
+    select {
+        grid-column: span 3;
+        display: flex;
+        flex-direction:row;
+        align-items:right;
+    }
+    }
+    

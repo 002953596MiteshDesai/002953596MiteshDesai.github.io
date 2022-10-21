@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Register here to get more information</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo__header" src="https://images.unsplash.com/photo-1554555263-f440a3f535f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt =" Green Sea Turtle swimming over a coral"> 
+        </a>    
+        <h1 class="heading__header">Register here to get more information</h1>
+        <ul class="menu">
+          <li>
+            <button type="button">Navigate</button>
+              <ul class="menu__items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+              </ul>
+          </li>  
+        </ul>
+          
+    </header> 
+    <main class="register__main">
+        <div class="register__form">
+        
+            <form action="/register" method="post">
+                <div>Fields marked with * are required</div>
+                <label>Name*  
+                <input type="text" name="name" type="text" required>
+                </label>     
+                
+                <label>Email* 
+                    <input type="text" name="email" type="email" required >
+                </label>  
+
+                <label>Would you like to know more about Turtles?
+                    <input type=checkbox name="more info " type="checkbox" checked>
+                </label>
+                
+                <label> Select Turtle*
+                    <select name="tier" required >
+                        <option value="" selected >Please select</option>
+                        <option value="1">Sea Turtles</option>
+                        <option value="2">River Turtles</option>
+                        <option value="3">Lake Turtles</option>
+                    </select>
+                </label>
+            
+                
+                <label> Submit details* 
+                    <button type="submit">Submit</button>
+                </label>
+
+            </form>
+        </div>
+
+    </main>   
+    <footer>
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
+    
+</body>
+</html>
+    
+    
+</body>
+</html>
